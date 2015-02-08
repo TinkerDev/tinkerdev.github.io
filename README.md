@@ -1,5 +1,3 @@
-### FShop static
-
 ### Install dependencies
 
 `bundle install`
