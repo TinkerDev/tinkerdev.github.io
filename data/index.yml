@@ -1,0 +1,21 @@
+title: TinkerDev
+subtitle: разработка веб-приложений
+skills:
+  title: Что мы делаем
+  content: |
+    ruby, ruby on rails, javascript, coffeescript, nodejs, user interface design, user experience, rapid prototyping, agile development
+content:
+  -
+    title: Кто мы
+  -
+    content: |
+      Александр Логунов
+    link:
+      title: github
+      url: https://github.com/unloved
+  -
+    content: |
+      Александр Мещеряков
+    link:
+      title: octobear.ru
+      url: http://octobear.ru

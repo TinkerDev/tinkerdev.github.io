@@ -1,0 +1,24 @@
+.container
+  .row
+    .col-md-6.col-md-offset-3
+      h1.app-page-title= data.index.title
+      h2.app-page-subtitle.text-muted= data.index.subtitle
+      hr
+      - data.index.content.each do |section|
+        - if section[:title].present?
+          h3= section[:title] 
+        - if section[:content].present? || section[:link].present?
+          p
+            - if section[:content].present?
+              = section[:content]
+            - if section[:link].present?
+              | &nbsp;&nbsp;
+              = link_to "#{section[:link][:title]} &rarr;".html_safe, section[:link][:url], class: 'btn btn-default btn-xs'
+
+      hr
+      h3= data.index.skills.title
+      p.text-muted= data.index.skills.content
+      hr
+
+
+
