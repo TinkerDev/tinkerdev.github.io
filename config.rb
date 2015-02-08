@@ -97,6 +97,16 @@ end
   # Or use a different image path
   # set :http_path, "/Content/images/"
 
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  # Optional Settings
+  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  # deploy.branch   = 'custom-branch' # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
+end
+
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   @bower_assets_path = File.join "#{root}", @bower_config["directory"]
